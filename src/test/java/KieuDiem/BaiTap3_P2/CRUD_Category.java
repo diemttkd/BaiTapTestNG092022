@@ -1,4 +1,4 @@
-package KieuDiem.BaiTap3;
+package KieuDiem.BaiTap3_P2;
 
 import KieuDiem.BaiTap2.BaseTest;
 import KieuDiem.KeyWords.WebUI;
@@ -10,8 +10,7 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class Assert_AddCategory extends BaseTest {
-
+public class CRUD_Category extends BaseTest {
     SoftAssert assertSoft = new SoftAssert();
 
     @BeforeClass
@@ -84,7 +83,7 @@ public class Assert_AddCategory extends BaseTest {
         driver.findElement(By.xpath("//input[@placeholder='Meta Title']")).sendKeys("Category_2811A2");
         WebUI.sleep(2);
         //Meta Description textbox
-//        driver.findElement(By.xpath("textarea[name='meta_description']")).sendKeys("Category description 1");
+        // driver.findElement(By.xpath("textarea[name='meta_description']")).sendKeys("Category description 1");
 
         //Filltering Attributes
         driver.findElement(By.xpath("//div[contains(text(),'Nothing selected')]")).click();
@@ -104,6 +103,6 @@ public class Assert_AddCategory extends BaseTest {
         assertSoft.assertEquals(actualName, "MLB Shirt", "No results");
 
         WebUI.sleep(2);
-        assertSoft.assertAll();
+
     }
 }
